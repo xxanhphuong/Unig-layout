@@ -67,13 +67,15 @@ p {
   font-size: 15px;
 }
 
+p,
+a,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", sans-serif;
 }
 
 header {
@@ -202,7 +204,7 @@ footer p {
 }
 #section-feedback .feedback-group .user-group {
   padding: 32px 0;
-  bottom: -110%;
+  bottom: -80%;
   position: absolute;
 }
 #section-feedback .feedback-group .user-group img {
@@ -291,6 +293,7 @@ footer p {
   align-self: baseline;
 }
 #section-last .activate-group {
+  position: relative;
   display: flex;
   padding-bottom: 24px;
 }
@@ -298,9 +301,9 @@ footer p {
   content: "";
   position: absolute;
   top: 0;
-  left: 34px;
+  left: 19px;
   width: 2px;
-  height: 65%;
+  height: 100%;
   z-index: 0;
   background-color: #987daf;
   -webkit-transition: all 0.4s;

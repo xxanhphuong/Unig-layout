@@ -68,13 +68,15 @@ p {
   font-size: 15px;
 }
 
+p,
+a,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", sans-serif;
 }
 
 header {
@@ -318,11 +320,18 @@ header label a {
 }
 #section-login .form-login .social-btn {
   color: #666666;
+  background: none;
   border: 2px solid #ececec;
   border-radius: 6px;
   padding: 6px 24px;
   width: 100%;
   margin: 8px 0px;
+  transition: 0.5;
+}
+#section-login .form-login .social-btn:hover {
+  opacity: 0.7;
+  color: #eeba00;
+  border-color: #eeba00;
 }
 #section-login .form-login .social-btn i {
   padding: 0 16px;
@@ -360,12 +369,20 @@ header label a {
     padding: 0 8px;
   }
 }
-@media only screen and (min-width: 813px) and (max-width: 1024px) {
+@media only screen and (min-width: 813px) and (max-width: 1023px) {
   #section-login .map {
     height: unset;
   }
   #section-login .form-login {
     width: 100%;
+  }
+}
+@media only screen and (max-width: 1440px) {
+  #section-login .form-login .fg-pw {
+    position: static;
+  }
+  #section-login .form-login .fg-pw a:last-child {
+    position: static;
   }
 }
 

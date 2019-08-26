@@ -45,7 +45,7 @@
     padding: 0 32px;
     .user-group {
       padding: 32px 0;
-      bottom: -110%;
+      bottom: -80%;
       position: absolute;
       img {
         vertical-align: middle;
@@ -141,13 +141,14 @@
     align-self: baseline;
   }
   .activate-group {
+    position: relative;
     &:not(:last-child):before {
       content: "";
       position: absolute;
       top: 0;
-      left: 34px;
+      left: 19px;
       width: 2px;
-      height: 65%;
+      height: 100%;
       z-index: 0;
       background-color: #987daf;
       -webkit-transition: all 0.4s;

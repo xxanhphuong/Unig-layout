@@ -68,13 +68,15 @@ p {
   font-size: 15px;
 }
 
+p,
+a,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", sans-serif;
 }
 
 header {
@@ -201,6 +203,7 @@ footer p {
 #section-find-job #section-staff .title-section {
   padding-top: 8%;
   text-align: center;
+  background: #653593;
 }
 #section-find-job #section-staff .title-section h3 {
   color: white;
@@ -281,6 +284,7 @@ footer p {
   background: #eeba00;
   border-radius: 6px;
   width: 100%;
+  color: white;
 }
 #regForm h1 {
   text-align: center;
@@ -310,7 +314,7 @@ footer p {
 #regForm .tab span {
   color: #eeba00;
   font-weight: 500;
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", sans-serif;
 }
 #regForm .tab h3 {
   color: #653593;
@@ -323,6 +327,10 @@ footer p {
   margin-bottom: 32px;
   width: 50%;
   padding: 6px 20px;
+}
+#regForm .tab .custom-control {
+  width: 100%;
+  overflow: hidden;
 }
 #regForm .tab .custom-control-input:checked ~ .custom-control-label::before {
   border-color: #a9a8aa;
@@ -347,7 +355,7 @@ footer p {
   background: white;
 }
 #regForm .tab .dt-group #datepicker input {
-  margin: 0 15px;
+  margin: 0;
   background: white;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.07);
   border-radius: 6px;
@@ -427,7 +435,17 @@ footer p {
   display: flex;
   justify-content: space-between;
 }
-#regForm .step-group .step {
+#regForm .step-group .line:not(:last-child):before {
+  content: "";
+  position: absolute;
+  top: 25%;
+  height: 2px;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+  background-color: #653593;
+}
+#regForm .step-group .step span {
   border: none;
   border-radius: 50px;
   display: inline-block;
@@ -444,41 +462,17 @@ footer p {
   position: relative;
   z-index: 1;
 }
-#regForm .step-group .step:not(:last-child):before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  height: 2px;
-  left: 61%;
-  width: 150%;
-  z-index: 0;
-  background-color: #653593;
-}
-#regForm .step-group .step.active {
+#regForm .step-group .step.active span {
   background: #eeba00;
   opacity: 1;
 }
-#regForm .step-group .step.active:not(:last-child):before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  height: 2px;
-  left: 61%;
-  width: 150%;
-  z-index: 0;
+#regForm .step-group .step.active:before {
   background-color: #eeba00;
 }
-#regForm .step-group .step.finish {
+#regForm .step-group .step.finish span {
   background-color: #eeba00;
 }
-#regForm .step-group .step.finish:not(:last-child):before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  height: 2px;
-  left: 61%;
-  width: 150%;
-  z-index: 0;
+#regForm .step-group .step.finish:before {
   background-color: #eeba00;
 }
 
@@ -501,7 +495,7 @@ footer p {
 
   #regForm {
     margin: 8% auto;
-    padding: 15px 15px 48px;
+    padding: 15px 15px 48px !important;
     width: 100%;
     min-width: 300px;
   }
@@ -543,11 +537,19 @@ footer p {
   .tab .dt-group .time {
     padding-left: 15px !important;
   }
+  .tab .dt-group #datepicker {
+    margin: 16px 0;
+  }
   .tab .dt-group #datepicker input {
     margin: 0 !important;
   }
   .tab .dt-group #datepicker span {
     right: 12px !important;
+  }
+}
+@media only screen and (max-width: 1440px) {
+  #regForm {
+    padding: 0 14%;
   }
 }
 

@@ -44,6 +44,7 @@
     .title-section {
       padding-top: 8%;
       text-align: center;
+      background: $primary-color;
       h3 {
         color: white;
         padding-bottom: 16px;
@@ -125,6 +126,7 @@
     background: $second-color;
     border-radius: 6px;
     width: 100%;
+    color: white;
   }
   h1 {
     text-align: center;
@@ -160,7 +162,7 @@
     span {
       color: $second-color;
       font-weight: 500;
-      font-family: "Helvetica Neue";
+      font-family: "Helvetica Neue", sans-serif;
     }
     h3 {
       color: $primary-color;
@@ -173,6 +175,10 @@
       margin-bottom: 32px;
       width: 50%;
       padding: 6px 20px;
+    }
+    .custom-control {
+      width: 100%;
+      overflow: hidden;
     }
     .custom-control-input:checked ~ .custom-control-label::before {
       border-color: #a9a8aa;
@@ -197,7 +203,7 @@
       }
       #datepicker {
         input {
-          margin: 0 15px;
+          margin: 0;
           background: white;
           box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.07);
           border-radius: 6px;
@@ -280,57 +286,47 @@
   .step-group {
     display: flex;
     justify-content: space-between;
-    .step {
-      border: none;
-      border-radius: 50px;
-      display: inline-block;
-      width: 40px;
-      height: 40px;
-      margin-bottom: 40px;
-      background: $primary-color;
-      text-align: center;
-      font-weight: bold;
-      line-height: 2.6em;
-      color: white;
-      cursor: default;
-      transition: 0.3s;
-      position: relative;
-      z-index: 1;
-      &:not(:last-child):before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        height: 2px;
-        left: 61%;
-        width: 150%;
-        z-index: 0;
-        background-color: $primary-color;
-      }
+    .line:not(:last-child):before {
+      content: "";
+      position: absolute;
+      top: 25%;
+      height: 2px;
+      left: 0;
+      width: 100%;
+      z-index: 0;
+      background-color: $primary-color;
     }
-    .step.active {
-      background: $second-color;
-      opacity: 1;
-      &:not(:last-child):before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        height: 2px;
-        left: 61%;
-        width: 150%;
-        z-index: 0;
+    .step {
+      span {
+        border: none;
+        border-radius: 50px;
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        margin-bottom: 40px;
+        background: $primary-color;
+        text-align: center;
+        font-weight: bold;
+        line-height: 2.6em;
+        color: white;
+        cursor: default;
+        transition: 0.3s;
+        position: relative;
+        z-index: 1;
+      }
+      &.active span {
+        background: $second-color;
+        opacity: 1;
+      }
+      &.active:before {
         background-color: $second-color;
       }
-    }
-    .step.finish {
-      background-color: $second-color;
-      &:not(:last-child):before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        height: 2px;
-        left: 61%;
-        width: 150%;
-        z-index: 0;
+      &.finish {
+        span {
+          background-color: $second-color;
+        }
+      }
+      &.finish:before {
         background-color: $second-color;
       }
     }
@@ -357,7 +353,7 @@
   }
   #regForm {
     margin: 8% auto;
-    padding: 15px 15px 48px;
+    padding: 15px 15px 48px !important;
     width: 100%;
     min-width: 300px;
     .tab .time {
@@ -405,6 +401,7 @@
         padding-left: 15px !important;
       }
       #datepicker {
+        margin: 16px 0;
         input {
           margin: 0 !important;
         }
@@ -413,5 +410,10 @@
         }
       }
     }
+  }
+}
+@media only screen and (max-width: 1440px) {
+  #regForm {
+    padding: 0 14%;
   }
 }

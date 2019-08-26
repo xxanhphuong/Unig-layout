@@ -74,7 +74,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", sans-serif;
 }
 
 header {
@@ -165,7 +165,7 @@ footer p {
 #section-home h1 {
   color: #653593;
   font-weight: bold;
-  margin-top: 55%;
+  margin-top: 40%;
   margin-bottom: 32px;
 }
 #section-home p {
@@ -177,7 +177,6 @@ footer p {
   margin: 0;
 }
 #section-home img {
-  width: 100%;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -216,7 +215,7 @@ footer p {
 #section-func .accordion .card button {
   color: #666666;
   font-weight: 500;
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", sans-serif;
   text-decoration: none;
   border-radius: 0;
   width: 100%;
