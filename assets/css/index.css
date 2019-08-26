@@ -157,8 +157,10 @@ footer p {
 #section-home {
   width: 100vw;
   height: 101vh;
-  background: url("../img/bg-home-section.png") no-repeat;
-  background-size: cover;
+  position: relative;
+}
+#section-home .z-2 {
+  z-index: 2;
 }
 #section-home h1 {
   color: #653593;
@@ -173,6 +175,14 @@ footer p {
 #section-home a {
   padding: 8px 40px;
   margin: 0;
+}
+#section-home img {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
 
 #section-func {
@@ -351,6 +361,7 @@ footer p {
 }
 #section-service svg {
   position: absolute;
+  z-index: -1;
 }
 #section-service svg:nth-child(2) {
   bottom: -1px;
@@ -582,11 +593,14 @@ footer p {
 
 @media only screen and (max-width: 767px) {
   #section-home {
-    background-size: 100%;
-    background-position-y: bottom;
+    width: 100%;
+    height: auto;
   }
   #section-home h1 {
     margin-top: 30%;
+  }
+  #section-home img {
+    position: static;
   }
 
   #section-func .accordion {
