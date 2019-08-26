@@ -1,0 +1,576 @@
+@import "style";
+
+#section-home {
+  width: 100vw;
+  height: 101vh;
+  background: url("../img/bg-home-section.png") no-repeat;
+  background-size: cover;
+  h1 {
+    color: $primary-color;
+    font-weight: bold;
+    margin-top: 55%;
+    margin-bottom: 32px;
+  }
+  p {
+    color: $font-color;
+    margin-bottom: 40px;
+  }
+  a {
+    padding: 8px 40px;
+    margin: 0;
+  }
+}
+
+#section-func {
+  position: relative;
+  h2.d-flex {
+    color: $primary-color;
+    font-weight: 500;
+    padding: 6% 0;
+  }
+  img {
+    width: 70%;
+    margin-bottom: 16%;
+  }
+  svg {
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+  }
+  .accordion {
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.07);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1;
+    .card {
+      border: none;
+      button {
+        color: $font-color;
+        font-weight: 500;
+        font-family: "Helvetica Neue";
+        text-decoration: none;
+        border-radius: 0;
+        width: 100%;
+        text-align: left;
+        transition: 0.3s;
+        padding: 16px 24px;
+        background: white;
+        &[aria-expanded="true"] {
+          background-color: $primary-color;
+          color: $second-color;
+        }
+      }
+      .card-header {
+        padding: 0;
+      }
+      .card-body {
+        background: #f7f5f9;
+        p {
+          color: $font-color;
+        }
+      }
+    }
+  }
+}
+
+#section-contact {
+  background: #e6daf0;
+  text-align: center;
+  padding: 4% 0;
+  .title-section {
+    margin: 0 auto;
+    font-size: 24px;
+    padding: 40px;
+    text-align: center;
+    color: $primary-color;
+    h2 {
+      padding: 6% 0;
+    }
+  }
+  .form-group {
+    input {
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.07);
+      border-radius: 6px;
+      border: none;
+      padding: 8px 16px;
+      width: 28%;
+      outline: none;
+      &::placeholder {
+        color: #a9a8aa;
+      }
+    }
+    button {
+      padding: 7px 16px;
+      margin: 0 24px;
+    }
+  }
+}
+
+#section-activate {
+  background: url("../img/bg-activate.png") no-repeat;
+  background-size: cover;
+  padding-bottom: 6%;
+  .title-section {
+    padding: 10% 0;
+    text-align: center;
+    h2 {
+      color: white;
+    }
+    a {
+      display: flex;
+      justify-content: center;
+      color: $second-color;
+      i {
+        font-size: 24px;
+        padding: 0 8px;
+      }
+    }
+  }
+  .line-step {
+    position: absolute;
+    top: 0;
+    left: 34px;
+    width: 2px;
+    z-index: 0;
+    background-color: #987daf;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  .carousel-inner {
+    .carousel-item {
+      color: white;
+      .title-item {
+        padding-bottom: 24px;
+      }
+      h2 {
+        padding-bottom: 16px;
+      }
+      p {
+        line-height: 1.8em;
+      }
+      .activate-group {
+        display: flex;
+        padding-bottom: 24px;
+        img {
+          width: 12%;
+          align-self: baseline;
+          padding: 6px 0;
+        }
+        .inf {
+          padding: 0 24px;
+          .inf-title {
+            color: $second-color;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+  .carousel-indicators-custom {
+    list-style: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    li {
+      &:last-child button {
+        margin: 0;
+      }
+      button {
+        border: none;
+        border-radius: 50px;
+        width: 40px;
+        height: 40px;
+        margin-bottom: 20%;
+        background: #987daf;
+        color: white;
+        font-weight: bold;
+        line-height: 2.5em;
+        transition: 0.3s;
+      }
+      .active-btn {
+        background: $second-color;
+      }
+    }
+  }
+}
+
+#section-service {
+  padding-bottom: 10%;
+  position: relative;
+  svg {
+    position: absolute;
+    &:nth-child(2) {
+      bottom: -1px;
+      right: 0;
+    }
+  }
+  .title-section {
+    padding: 6% 0;
+    text-align: center;
+    p {
+      color: $font-color;
+      line-height: 1.5em;
+    }
+    h2 {
+      color: $primary-color;
+      padding-bottom: 16px;
+    }
+  }
+  .service-card {
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.07);
+    border-radius: 10px;
+    overflow: hidden;
+    .title-card {
+      text-align: center;
+      background: $primary-color;
+      color: white;
+      padding: 24px 0;
+    }
+    .inf-group {
+      text-align: center;
+      padding: 24px 16px;
+      background: white;
+      button {
+        display: block;
+        margin: 16px auto 0 auto;
+        width: 60%;
+        padding: 8px 20px;
+        font-size: 17px;
+        font-weight: 500;
+      }
+      p {
+        padding: 8px 0;
+        color: $font-color;
+        span {
+          color: $primary-color;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+#section-evaluate {
+  .slick-initialized .slick-slide {
+    margin: 50px;
+    opacity: 0.7;
+  }
+  .slick-slide {
+    width: 500px;
+  }
+  .slick-list {
+    overflow: hidden;
+  }
+  .slick-initialized .slick-current {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  .slick-prev {
+    left: 150px !important;
+    z-index: 1;
+  }
+  .slick-next {
+    right: 150px !important;
+    z-index: 1;
+  }
+  .slick-prev:before {
+    content: "←";
+  }
+  .slick-next:before,
+  .slick-prev:before {
+    font-family: slick;
+    font-size: 36px;
+    line-height: 1;
+    opacity: 1;
+    color: #ffca00;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  background: #fbeebf;
+  padding-bottom: 6%;
+  .title-section {
+    padding: 4% 0;
+    text-align: center;
+    p {
+      color: $font-color;
+      line-height: 1.5em;
+    }
+    h2 {
+      color: $primary-color;
+      padding-bottom: 16px;
+    }
+  }
+
+  .item-slider {
+    background: white;
+    box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.07);
+    padding: 40px;
+    border-radius: 10px;
+    color: $font-color;
+    .head {
+      display: flex;
+      padding-bottom: 32px;
+      .user {
+        display: flex;
+        img {
+          width: 10%;
+          align-self: baseline;
+        }
+        .user-inf {
+          p {
+            color: $primary-color;
+            margin: 4px 16px;
+            &:last-child {
+              color: $font-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#section-sign-up {
+  padding-bottom: 6%;
+  background: #e6daf0;
+  .title-section {
+    padding: 6% 0;
+    text-align: center;
+    p {
+      color: $font-color;
+      line-height: 1.5em;
+    }
+    h2 {
+      color: $primary-color;
+      padding-bottom: 16px;
+    }
+  }
+  .form-row {
+    width: 80%;
+    margin: 0 auto;
+  }
+  button {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    padding: 7px 0;
+  }
+}
+
+#section-last {
+  .title-section {
+    padding: 6% 0;
+    text-align: center;
+    p {
+      color: $font-color;
+      line-height: 1.5em;
+    }
+    h2 {
+      color: $primary-color;
+      padding-bottom: 16px;
+    }
+  }
+  .mockup {
+    width: 70%;
+    align-self: baseline;
+  }
+  .activate-group {
+    &:not(:last-child):before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 34px;
+      width: 2px;
+      height: 55%;
+      z-index: 0;
+      background-color: #987daf;
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s;
+    }
+    display: flex;
+    padding-bottom: 24px;
+    img {
+      width: 25%;
+      align-self: baseline;
+    }
+    .step {
+      z-index: 1;
+      p {
+        border: none;
+        border-radius: 50px;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        margin-top: -9px;
+        background: #987daf;
+        color: white;
+        font-weight: bold;
+        line-height: 2.5em;
+      }
+    }
+    .inf {
+      padding: 0 24px;
+      .inf-title {
+        color: #eeba00;
+        font-weight: bold;
+      }
+      .btn-group {
+        a {
+          display: inline-block;
+        }
+        display: flex;
+        align-items: center;
+        padding: 16px 0;
+        span {
+          margin: 0 16px;
+        }
+        .second-btn {
+          padding: 7px 24px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #section-home {
+    background-size: 100%;
+    background-position-y: bottom;
+    h1 {
+      margin-top: 30%;
+    }
+  }
+  #section-func {
+    .accordion {
+      width: 100%;
+    }
+    img {
+      width: 100%;
+    }
+    h2 {
+      text-align: center;
+    }
+  }
+  #section-contact {
+    .form-group {
+      input {
+        width: 100%;
+        margin-bottom: 16px;
+      }
+    }
+  }
+  #section-activate {
+    .line-step {
+      display: none;
+    }
+    ul {
+      display: flex;
+      margin-bottom: 16px !important;
+      li {
+        margin-right: 16px;
+      }
+    }
+  }
+  #section-service {
+    overflow: hidden;
+    .service-card {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+  }
+  #section-evaluate {
+    .slick-slide {
+      width: 350px;
+      margin: 30px !important;
+    }
+    .slick-initialized .slick-current {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  #section-sign-up {
+    .form-row {
+      width: 90%;
+      input {
+        margin-bottom: 16px;
+      }
+    }
+  }
+  #section-last {
+    .activate-group:not(:last-child):before {
+      height: 50%;
+    }
+    .btn-group {
+      flex-direction: column;
+      align-items: flex-start !important;
+      span {
+        padding: 8px 0;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #section-home {
+    width: 100vw;
+    height: 101vh;
+    background: url(../img/bg-home-section.png) no-repeat;
+    background-size: 100%;
+    background-position-y: bottom;
+    min-height: 800px;
+    h1 {
+      margin-top: 24%;
+    }
+  }
+  #section-func {
+    min-height: 600px;
+  }
+  #section-service {
+    svg {
+      z-index: 1;
+    }
+    .container {
+      position: relative;
+      z-index: 2;
+    }
+  }
+  #section-service {
+    .service-card {
+      width: 100%;
+      .inf-group {
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+  #section-sign-up {
+    .form-row {
+      width: 90%;
+      input,
+      button {
+        margin-bottom: 16px;
+      }
+    }
+  }
+  #section-last {
+    .btn-group {
+      flex-direction: column;
+      align-items: flex-start !important;
+      span {
+        padding: 8px 0;
+      }
+    }
+    .activate-group {
+      &:not(:last-child):before {
+        height: 50%;
+      }
+    }
+  }
+}

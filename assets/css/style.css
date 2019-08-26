@@ -1,0 +1,156 @@
+.primary-btn {
+  color: #eeba00;
+  border: 2px solid #eeba00;
+  border-radius: 6px;
+  padding: 4px 24px;
+  margin: 0 8px;
+}
+.primary-btn:hover {
+  color: #eeba00;
+  opacity: 0.7;
+  transition: 0.4s;
+}
+
+.second-btn {
+  color: white;
+  border: 2px solid #eeba00;
+  border-radius: 6px;
+  background: #eeba00;
+  padding: 4px 24px;
+  margin: 0 8px;
+}
+.second-btn:hover {
+  color: white;
+  opacity: 0.7;
+  transition: 0.4s;
+}
+
+button:focus {
+  outline: none;
+}
+
+input {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.07);
+  border-radius: 6px;
+  border: none;
+  padding: 8px 16px;
+  width: 100%;
+  outline: none;
+  border: none !important;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  color: white;
+}
+a:hover {
+  text-decoration: none;
+  color: #eeba00;
+  transition: 0.2s;
+}
+
+p {
+  font-size: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Helvetica Neue";
+}
+
+header {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: position 10s;
+  -ms-transition: position 10s;
+  -o-transition: position 10s;
+  transition: all 0.5s ease;
+}
+header .navbar {
+  padding: 24px 0;
+  position: absolute;
+  width: 100%;
+  background: white;
+  z-index: 10;
+}
+header .navbar .nav-link {
+  color: #666666;
+  font-weight: 500;
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 7;
+  animation: smoothScroll 1s forwards;
+}
+
+@keyframes smoothScroll {
+  0% {
+    transform: translateY(-80px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@media only screen and (max-width: 1023px) {
+  header .navbar {
+    padding: 16px;
+  }
+  header .navbar i {
+    font-size: 28px;
+  }
+
+  .navbar-light .navbar-toggler {
+    border: none;
+  }
+  .navbar-light .navbar-collapse {
+    height: 100vh;
+    text-align: center;
+  }
+  .navbar-light .navbar-collapse form {
+    display: flex;
+    justify-content: center;
+  }
+}
+footer {
+  background: #653593;
+  padding: 40px 0;
+}
+footer h6 {
+  color: white;
+  font-size: 15px;
+}
+footer a {
+  font-size: 15px;
+  color: #e5e5e5;
+}
+footer a i {
+  font-size: 20px;
+}
+footer p {
+  font-size: 12px;
+  color: #d0c9d6;
+  margin: 8px 0;
+}
+
+/*# sourceMappingURL=style.css.map */

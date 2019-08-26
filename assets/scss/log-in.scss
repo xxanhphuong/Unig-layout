@@ -1,0 +1,225 @@
+@import "style";
+
+main {
+  padding-top: 5%;
+}
+label.error {
+  display: inline-block;
+  color: red;
+  padding: 0;
+  font-size: 14px;
+}
+header {
+  label {
+    a {
+      color: $font-color;
+    }
+  }
+}
+#section-login {
+  .btn-readmore {
+    border: none;
+    padding: 10px;
+    font-size: 17px;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+    margin: 16px 0;
+    background: #f7f5f9;
+    color: $font-color;
+    border-radius: 50px;
+    &:hover {
+      opacity: 0.8;
+    }
+    padding-left: 14px;
+    &::after {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f105";
+      color: white;
+      background: $second-color;
+      padding: 8px 12.5px;
+      margin-left: 10px;
+      border-radius: 50px;
+    }
+  }
+  .btn-login {
+    border: none;
+    padding: 10px;
+    font-size: 17px;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+    margin: 16px 0;
+    background: #f7f5f9;
+    color: $font-color;
+    border-radius: 50px;
+    &:hover {
+      opacity: 0.8;
+    }
+    padding-right: 14px;
+    &::before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f104";
+      background: $second-color;
+      color: white;
+      padding: 8px 12.5px;
+      margin-right: 10px;
+      border-radius: 50px;
+    }
+  }
+  .rules-label {
+    span {
+      color: $font-color;
+      font-family: "Montserrat", sans-serif;
+      font-weight: unset;
+    }
+    a {
+      color: $second-color;
+      font-family: "Montserrat", sans-serif;
+      text-decoration: underline;
+    }
+  }
+  .custom-control-input:checked ~ .custom-control-label::before {
+    border-color: #a9a8aa;
+    background-color: white;
+  }
+  .custom-control-label::after {
+    content: "";
+    background: no-repeat 50%;
+  }
+  .custom-checkbox .custom-control-label::before {
+    border-radius: 50%;
+  }
+  .custom-control-input:checked ~ .custom-control-label::after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='%23EEBA00'/></svg>");
+    border: 1px solid #ffca00;
+    border-radius: 50%;
+  }
+  .map {
+    padding: 8% 0;
+    height: 100vh;
+    background: url("../img/map.png") no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .map-inf {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 42%;
+        bottom: -10px;
+        z-index: 1;
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 20px solid #653593;
+        clear: both;
+      }
+      label {
+        color: $primary-color;
+        background: white;
+        padding: 4px 16px;
+        border-radius: 6px;
+        position: absolute;
+        z-index: 3;
+        top: -15px;
+        left: 16px;
+      }
+      .inf {
+        z-index: 2;
+        position: relative;
+        color: white;
+        background: $primary-color;
+        padding: 28px 32px 14px 32px;
+        border-radius: 6px;
+      }
+    }
+  }
+  .form-login {
+    margin: 8% auto;
+    width: 65%;
+    box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.07);
+    border-radius: 10px;
+    padding: 32px;
+    h2 {
+      color: $primary-color;
+      text-align: center;
+    }
+    input {
+      margin: 32px 0 8px 0;
+      padding: 8px 15px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.07);
+      border-radius: 6px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &::placeholder {
+        color: #a9a8aa;
+      }
+    }
+    .second-btn {
+      padding: 8px 0;
+      width: 100%;
+      margin: 32px 0;
+    }
+    .social-btn {
+      color: #666666;
+      border: 2px solid #ececec;
+      border-radius: 6px;
+      padding: 6px 24px;
+      width: 100%;
+      margin: 8px 0px;
+      i {
+        padding: 0 16px;
+      }
+    }
+    .fg-pw {
+      font-size: 14px;
+      position: relative;
+      margin-bottom: 16px;
+      a {
+        color: $second-color;
+        font-weight: 500;
+        text-decoration-line: underline;
+        &:last-child {
+          position: absolute;
+          right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 812px) {
+  #section-login {
+    .map {
+      padding: 26% 0 20% 0;
+      height: unset;
+    }
+    .form-login {
+      width: 100%;
+      .fg-pw a:last-child {
+        position: static;
+      }
+      .social-btn {
+        padding: 6px 8px;
+        i {
+          padding: 0 8px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 813px) and (max-width: 1024px) {
+  #section-login {
+    .map {
+      height: unset;
+    }
+    .form-login {
+      width: 100%;
+    }
+  }
+}
