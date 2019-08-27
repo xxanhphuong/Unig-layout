@@ -503,6 +503,7 @@ footer p {
     padding-left: 15px !important;
   }
   #regForm .tab .time .my-time-picker input {
+    background: none;
     padding: 10px 0 10px 10px;
     max-width: 160px;
   }
@@ -528,6 +529,12 @@ footer p {
     margin: 8% auto;
     padding: 15px;
     width: 100%;
+  }
+  #regForm .tab .time .my-time-picker {
+    margin-top: 16px;
+  }
+  #regForm .tab .time .my-time-picker input {
+    background: none !important;
   }
 
   .custom-checkbox {

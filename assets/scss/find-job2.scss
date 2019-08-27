@@ -360,6 +360,7 @@
       padding-left: 15px !important;
       .my-time-picker {
         input {
+          background: none;
           padding: 10px 0 10px 10px;
           max-width: 160px;
         }
@@ -391,6 +392,12 @@
     margin: 8% auto;
     padding: 15px;
     width: 100%;
+    .tab .time .my-time-picker {
+      margin-top: 16px;
+      input {
+        background: none !important;
+      }
+    }
   }
   .custom-checkbox {
     display: block !important;
