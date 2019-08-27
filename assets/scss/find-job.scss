@@ -1,4 +1,5 @@
 @import "style";
+@import "index";
 
 .fixed-header {
   z-index: 7;
@@ -256,7 +257,7 @@
     padding: 0% 0;
   }
   #section-last .activate-group:not(:last-child):before {
-    left: 48px;
+    left: 34px;
   }
   #section-last .mockup {
     padding-bottom: 24px;
