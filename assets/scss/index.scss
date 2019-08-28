@@ -482,6 +482,11 @@
     }
   }
   #section-activate {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 0 0;
+    padding-bottom: 6%;
     .line-step {
       display: none;
     }
